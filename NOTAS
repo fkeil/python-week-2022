@@ -1,0 +1,15 @@
+ipython
+from sqlmodel import Session, select
+from beerlog.models import Beer
+from beerlog.database import engine
+
+with Session(engine) as session:
+   ...:     sql = select(Beer)
+   ...:     results = session.exec(sql)
+   ...:     for beer in results:
+   ...:         print(beer.name)
+
+with Session(engine) as session:
+   ...:     beer = Beer(name="Fernando", style="IPA", flavor=7, image=8, cost=8)
+   ...:     session.add(beer)
+   ...:     session.commit()
