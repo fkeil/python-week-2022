@@ -12,4 +12,8 @@ with Session(engine) as session:
 with Session(engine) as session:
    ...:     beer = Beer(name="Fernando", style="IPA", flavor=7, image=8, cost=8)
    ...:     session.add(beer)
-   ...:     session.commit()
+   ...:     session.commit(
+      
+
+
+      TESTE
