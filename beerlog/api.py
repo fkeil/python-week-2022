@@ -10,7 +10,7 @@ from beerlog.serializers import BeerIn, BeerOut
 api = FastAPI(title="Beerlog")
 
 
-@api.get("/beers/", response_model=List[BeerOut])
+@api.get("/beers", response_model=List[BeerOut])
 async def list_beers(style: Optional[str] = None):
     """Lists beers from the database"""
     beers = get_beers_from_database(style)
